@@ -1,0 +1,19 @@
+.listItem span {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.button {
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  border: 1px #ead5d5 solid;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px -3px #000000;
+}
+
+.button:active {
+  background: linear-gradient(to bottom, #298bce 0%, #1c6ea4 50%, #393fc5 100%);
+}
