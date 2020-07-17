@@ -32,15 +32,19 @@ export default class App extends Component {
 
     const { name, number, contacts } = this.state;
 
-    if (!contacts.find(e => e.name === name)) {
-      this.state.contacts.push({
-        id: uuid(),
-        name: name,
-        number: number,
-      });
-      this.reset();
-    } else {
-      alert(`${name} is already in contacts`);
+    if (name) {
+      if (!contacts.find(e => e.name === name)) {
+        if (name.length > 3) {
+          this.state.contacts.push({
+            id: uuid(),
+            name: name,
+            number: number,
+          });
+        }
+        this.reset();
+      } else {
+        alert(`${name} is already in contacts`);
+      }
     }
   };
 
